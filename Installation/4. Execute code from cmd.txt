@@ -1,0 +1,9 @@
+1. Find the code with .cpp extention or write a code in notepad++/notepad and save it with .cpp extention (eg. main.cpp).
+2. Launch command prompt and change the folder where .cpp file is present.
+3. run command "g++ -Wall -std=c++17 main.cpp" . It will produce an executable file by default it will be a.exe
+	-To change the name of exe file run command "g++ -Wall -std=c++17 main.cpp -o main.exe".
+4. Run the name of exe file in cmd ie. "a" or "main" and the code will run and give output.
+
+You can run C++ code online in your browser by using url cpp.sh
+
+

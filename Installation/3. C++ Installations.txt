@@ -1,0 +1,26 @@
+Installation Steps for Windows 10 OS. (Very similar to installation on Ubuntu)
+
+1. Go to https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/ and download the compiler mingw-get-setup.exe as per 64/32 bit OS and install it.
+2. On MingW Installation Manager --> Click Basic Setup --> Mark "msys-base", "mingw32-gcc-g++" and "mingw32-base" for installation. --> Click on "Installation" --> Apply Changes --> Apply (Make sure internet connection is up)
+3. Add new environment path variable in System Variable (if mingw compiler is installed at C:\MinGW\bin then set the same path including bin).
+
+4. Go to https://downloads.codelite.org and install the stable release of CodeLite IDE.
+5. If you launch the CodeLite for the first time, then you will get a setup wizard pop up. If it didn't pop up then click on Help and run the setup wizard.
+6. Click Next --> Clear plugins and select C/C++ development only --> Next --> Scan to find MingW --> Next --> Customize color and fonts --> Next --> Finish --> Remember my Answers --> Save and Exit.
+7. Launch the Codelite --> Create "New Workspace" by giving any name. On left side of window you will find your workspace name.
+8. Right click on the Workspace --> New --> New Project --> Click "console" option -->Select "simple executable (g++)" --> Next --> Specify any Project Name --> Next --> Verify the name of MingW compiler -->Finish.
+9. Click on the Project name and select the main.cpp file. If C code is there then replace it with C++ code.
+    eg: #include <iostream>
+
+	int main() {
+    	std::cout << "Hello testing...";
+    	return 0;
+	}
+10. Right Click on the project name --> Settings --> Global Settings --> Click the next empty cell after C++ Compiler Option --> Click on "..." --> Select "Enable C++ 17/14 Options" and "Enable all warnings" --> Ok --> Apply --> Ok
+11. Right Click on the Workspace name --> Code Completion --> Enable C++ 17/14  Standard -->OK
+12. Build --> Clean Project. Again click "Build" --> Run --> Build and Execute. If error then it will be displayed in the windom at bottom of CodeLite.
+13. If cpp dll file not found error is present then Right Click on the project name --> Settings --> Global Settings --> Click the next empty cell after Linker Options --> Click on "..." --> Enter Other Option --> write below commands:
+	-static-libgcc
+	-static-libstdc++
+14. Always run program by Build --> Clean Project. Again click "Build" --> Run --> Build and Execute.	
+15. Go to View --> Uncheck "Toggle Minimal View" to get shortcut toolbar.
